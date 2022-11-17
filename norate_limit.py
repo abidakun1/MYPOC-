@@ -18,7 +18,7 @@ def get_data(url):
         print(response.status_code)
 
 for i in range(5000):
-    base_url = "https://vsp-int.thefacebook.com/auriga/api/auth/token"
+    base_url = "https://redacted.com/auriga/api/auth/token"
     data = get_data(base_url)
 
 
