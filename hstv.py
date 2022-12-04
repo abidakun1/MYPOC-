@@ -1,6 +1,6 @@
 
 import sys
-
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from requests.exceptions import ConnectionError
 import requests
 
@@ -16,6 +16,7 @@ url = sys.argv[1]
 print("CHECK: HTTP STRICT TRANSPORT VULNERABILITY")
 
 try:
+    requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
     response = requests.get(url, verify=False)
     if "strict-transport-security" in response.headers:
         print(f"{R}NOT VULNERABLE -: Http Strict TS present")
