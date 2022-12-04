@@ -8,7 +8,7 @@ G = "\033[0;32m"
 R = "\033[0;31m"
 
 if len(sys.argv) != 2:
-    print(f"Usage: hstv.py URL")
+    print(f"Usage: python3 hstv.py example.com ")
     exit(1)
 
 url = sys.argv[1]
